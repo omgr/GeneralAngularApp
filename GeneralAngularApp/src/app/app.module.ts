@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { TestComponent } from './components/test/test.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     ProductsComponent,
     TestComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
