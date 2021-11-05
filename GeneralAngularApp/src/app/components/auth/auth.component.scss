@@ -1,0 +1,27 @@
+.card{
+    min-width: 100%;
+    min-height: 15rem;
+    align-items: center!important;
+    // justify-content: start;
+    align-content: center!important;
+    
+}
+.row{
+    min-width: 100%;
+}
+
+.lgn-padding{
+    padding: 4rem;
+}
+
+.imgWidth{
+    max-width: 7rem!important;
+}
+
+.row > button{
+    max-width: 10rem;
+}
+
+.tcenter{
+    text-align: center;
+}

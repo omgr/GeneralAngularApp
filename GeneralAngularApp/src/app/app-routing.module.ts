@@ -5,6 +5,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { TestComponent } from './components/test/test.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthComponent } from './components/auth/auth.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'',component:HeaderComponent, outlet:'header'},
   {path:'',component:FooterComponent, outlet:'footer'},
   {path:'login', component:LoginComponent, children:[ ]},
+  {path:'auth', component:AuthComponent, children:[ ]},
   {path:'products', component:ProductsComponent, children:[ ]},
   {path:'test', component:TestComponent, children:[ ]}
 ];
@@ -21,3 +23,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const RoutingComponents = [HeaderComponent,  FooterComponent,  ProductsComponent,  TestComponent,  LoginComponent, AuthComponent];

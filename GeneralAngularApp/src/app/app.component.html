@@ -23,6 +23,12 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
+<div class="container" *ngIf="auth.isLoading$ | async; else loaded">
+    <app-loader></app-loader>
+  </div>
+
+  <ng-template #loaded>
+
 <router-outlet name="header"></router-outlet>
 
 
@@ -32,3 +38,4 @@
         </div>
 <router-outlet name="footer"></router-outlet>
 </div>
+</ng-template>

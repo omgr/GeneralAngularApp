@@ -4,29 +4,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ProductsComponent } from './components/products/products.component';
-import { TestComponent } from './components/test/test.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { LoginComponent } from './components/login/login.component';
+import { RoutingComponents } from './app-routing.module';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from '../../src/environments/environment';
+import { LoaderComponent } from './components/common/loader/loader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    ProductsComponent,
-    TestComponent,
-    LoginComponent,
+    RoutingComponents,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    AuthModule.forRoot({
+      ...environment.auth
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
